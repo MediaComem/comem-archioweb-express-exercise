@@ -48,8 +48,6 @@ This project is an [Express.js][express] application which exposes an
 [OpenAPI][openapi] document that describes the API to implement as an exercise.
 The UI is rendered with [Swagger UI][swagger-ui].
 
-
-
 [express]: https://expressjs.com
 [node]: https://nodejs.org
 [openapi]: https://github.com/OAI/OpenAPI-Specification
