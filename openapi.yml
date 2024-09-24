@@ -1,0 +1,148 @@
+openapi: '3.1.0'
+
+info:
+  title: ArchiOWeb Express.js Exercise
+  description: |-
+    **Write an Express.js application that implements this API** and **test it
+    with [Postman](https://www.postman.com)**.
+
+    If your Express.js application listens on local port 3000, you can also test
+    it right out of this page by clicking the **Try it out!** buttons in the
+    various routes below.
+  version: 1.0.0
+  contact:
+    url: https://github.com/MediaComem/comem-archioweb-express-exercise
+
+servers:
+  - url: http://localhost:3000
+
+tags:
+  - name: Hello
+    description: |
+      Implement a basic Hello World **route** and learn how to retrieve **query
+      parameters**.
+  - name: That does not compute
+    description: |
+      Implement a route that consumes a **JSON** list of numbers in the
+      **request body**, and returns some information about these numbers.
+  - name: Online library
+    description: |
+      Implement a route that can **retrieve a book's information in JSON
+      format** based on the book's **ID in the URL path**.
+
+paths:
+  /hello:
+    get:
+      summary: Salute the world (or anyone).
+      description: |
+        This route salutes the world when called without parameters. When called
+        with the `name` query parameter, it salutes that person instead.
+      tags:
+        - Hello
+      parameters:
+        - name: name
+          in: query
+          description: The optional name of the person to salute.
+          schema:
+            type: string
+            example: Alice
+      responses:
+        200:
+          description: The world was successfully saluted.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Hello, World!
+  /computations:
+    post:
+      summary: Compute information about a list of numbers.
+      description: |
+        This route consumes a JSON payload containing a list of numbers, and
+        returns the average and total sum of these numbers.
+      tags:
+        - That does not compute
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                numbers:
+                  type: array
+                  items:
+                    type: number
+                  example: [1, 2, 3, 4]
+              required:
+                - numbers
+      responses:
+        200:
+          description: The computations were successfully completed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  average:
+                    type: number
+                    example: 2.5
+                  total:
+                    type: number
+                    example: 10
+                required:
+                  - average
+                  - total
+        422:
+          description: The provided data is invalid.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: The request body must contain a list of numbers.
+  /books/{bookId}:
+    get:
+      summary: Retrieve a book's information.
+      description: |
+        Download and save these JSON files to your Express.js application's
+        directory:
+        [https://github.com/MediaComem/comem-archioweb-express-exercise/books](https://github.com/MediaComem/comem-archioweb-express-exercise/books)
+
+        Implement a route that can retrieve a book's information based on its
+        alphanumeric ID. If the ID is not found, the response should indicate
+        that as an error.
+      tags:
+        - Online library
+      parameters:
+        - name: bookId
+          in: path
+          description: The unique identifier of the book.
+          required: true
+          schema:
+            type: string
+            example: obs
+      responses:
+        200:
+          description: The book was successfully retrieved.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: obs
+                  title:
+                    type: string
+                    example: On Basilisk Station
+                  author:
+                    type: string
+                    example: David Weber
+                  publication:
+                    type: number
+                    minimum: -4000
+                    example: 1993
+        404:
+          description: The book does not exist.
+          content:
+            text/plain:
+              example: No book found with ID ops.
