@@ -1,0 +1,12 @@
+# https://docs.docker.com/build/concepts/context/#dockerignore-files
+/.github
+/books
+/node_modules
+/.editorconfig
+/.gitignore
+/.prettierignore
+/.prettierrc.yml
+/.tool-versions
+/compose.yml
+/Dockerfile
+/nodemon.json

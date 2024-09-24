@@ -1,0 +1,17 @@
+name: archioweb-express-exercise
+
+services:
+  app:
+    build:
+      context: .
+    image: archioweb/express-exercise
+    environment:
+      - DEBUG=archioweb:express:*
+    init: true
+    networks:
+      - app
+    ports:
+      - '${ARCHIOWEB_EXPRESS_PORT:-3000}:3000'
+
+networks:
+  app:
