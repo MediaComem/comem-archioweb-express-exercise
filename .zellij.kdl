@@ -9,7 +9,7 @@ layout {
         args "run" "format"
       }
 
-      pane command="npm" split_direction="horizontal" {
+      pane command="npm" {
         args "run" "dev"
       }
     }
