@@ -31,6 +31,6 @@ USER app:app
 
 COPY --chown=app:app --from=builder /app /app
 
-CMD ["node", "./bin/www.js"]
+CMD ["node", "./bin/www"]
 
 EXPOSE 3000
