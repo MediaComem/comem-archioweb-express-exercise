@@ -1,6 +1,7 @@
 # Web-Oriented Architecture Express.js Exercise
 
-Learn to implement API routes with [Express.js][express].
+Learn to implement API routes with [Express.js][express]. This exercise is part
+of the [Web-Oriented Architecture course][archioweb].
 
 [![build](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/build.yml/badge.svg)](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/build.yml)
 [![publish](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/publish.yml/badge.svg)](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/publish.yml)
@@ -48,6 +49,7 @@ This project is an [Express.js][express] application which exposes an
 [OpenAPI][openapi] document that describes the API to implement as an exercise.
 The UI is rendered with [Swagger UI][swagger-ui].
 
+[archioweb]: https://github.com/MediaComem/comem-archioweb
 [express]: https://expressjs.com
 [node]: https://nodejs.org
 [openapi]: https://github.com/OAI/OpenAPI-Specification
