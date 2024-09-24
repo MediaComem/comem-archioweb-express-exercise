@@ -2,9 +2,9 @@
 
 Learn to implement API routes with [Express.js][express].
 
-[![build](https://github.com/MediaComem/comem-rest-demo/actions/workflows/build.yml/badge.svg)](https://github.com/MediaComem/comem-rest-demo/actions/workflows/build.yml)
-[![publish](https://github.com/MediaComem/comem-rest-demo/actions/workflows/publish.yml/badge.svg)](https://github.com/MediaComem/comem-rest-demo/actions/workflows/publish.yml)
-[![license](https://img.shields.io/github/license/MediaComem/comem-rest-demo)](https://opensource.org/licenses/MIT)
+[![build](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/build.yml/badge.svg)](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/build.yml)
+[![publish](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/publish.yml/badge.svg)](https://github.com/MediaComem/comem-archioweb-express-exercise/actions/workflows/publish.yml)
+[![license](https://img.shields.io/github/license/MediaComem/comem-archioweb-express-exercise)](https://opensource.org/licenses/MIT)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
