@@ -1,6 +1,6 @@
 {
   "name": "comem-archioweb-express-exercise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Learn to implement API routes with Express.js",
   "private": true,
   "repository": {
