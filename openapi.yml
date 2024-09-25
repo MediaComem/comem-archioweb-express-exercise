@@ -105,7 +105,7 @@ paths:
       description: |
         Download and save these JSON files to your Express.js application's
         directory:
-        [https://github.com/MediaComem/comem-archioweb-express-exercise/books](https://github.com/MediaComem/comem-archioweb-express-exercise/books)
+        [https://github.com/MediaComem/comem-archioweb-express-exercise/tree/main/books](https://github.com/MediaComem/comem-archioweb-express-exercise/tree/main/books)
 
         Implement a route that can retrieve a book's information based on its
         alphanumeric ID. If the ID is not found, the response should indicate
